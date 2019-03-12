@@ -57,4 +57,70 @@ class TestProfileCalculations {
         // ASSERT
         assertEquals(1781, result)
     }
+
+    @Test
+    fun testCalculateDailyCarbIntakeMale() {
+        // ARRANGE
+
+        // ACT
+        val result = maleProfile.calculateDailyCarbIntake()
+
+        // ASSERT
+        assertEquals(531, result)
+    }
+
+    @Test
+    fun testCalculateDailyCarbIntakeFemale() {
+        // ARRANGE
+
+        // ACT
+        val result = femaleProfile.calculateDailyCarbIntake()
+
+        // ASSERT
+        assertEquals(289, result)
+    }
+
+    @Test
+    fun testCalculateDailyProteinIntakeMale() {
+        // ARRANGE
+
+        // ACT
+        val result = maleProfile.calculateDailyProteinIntake()
+
+        // ASSERT
+        assertEquals(163, result)
+    }
+
+    @Test
+    fun testCalculateDailyProteinIntakeFemale() {
+        // ARRANGE
+
+        // ACT
+        val result = femaleProfile.calculateDailyProteinIntake()
+
+        // ASSERT
+        assertEquals(89, result)
+    }
+
+    @Test
+    fun testCalculateDailyFatIntakeMale() {
+        // ARRANGE
+
+        // ACT
+        val result = maleProfile.calculateDailyFatIntake()
+
+        // ASSERT
+        assertEquals(121, result)
+    }
+
+    @Test
+    fun testCalculateDailyFatIntakeFemale() {
+        // ARRANGE
+
+        // ACT
+        val result = femaleProfile.calculateDailyFatIntake()
+
+        // ASSERT
+        assertEquals(66, result)
+    }
 }

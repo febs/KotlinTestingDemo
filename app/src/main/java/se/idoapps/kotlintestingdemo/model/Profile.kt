@@ -45,7 +45,7 @@ class Profile {
         return Math.round(calculateDailyEnergyIntake() * 0.2 / 4).toInt()
     }
 
-    fun getActivityLevelFactor(): Double {
+    private fun getActivityLevelFactor(): Double {
         return when(physicalActivity) {
             PhysicalActivityTypes.NotActiveAtAll -> 1.2
             PhysicalActivityTypes.SlightlyActive -> 1.375
