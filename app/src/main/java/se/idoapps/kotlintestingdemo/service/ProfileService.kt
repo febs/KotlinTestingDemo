@@ -11,15 +11,7 @@ interface ProfileServiceInterface {
 }
 
 class ProfileService @Inject constructor (private val profileRepository: ProfileRepositoryInterface): ProfileServiceInterface {
-    override fun getProfile(): Profile? {
-        return profileRepository.getProfile()
-    }
-
-    override fun saveProfile(profile: Profile) {
-        profileRepository.saveProfile(profile)
-    }
-
-    override fun hasProfile(): Boolean {
-        return profileRepository.getProfile() != null
-    }
+    override fun getProfile(): Profile? = profileRepository.getProfile()
+    override fun saveProfile(profile: Profile) = profileRepository.saveProfile(profile)
+    override fun hasProfile(): Boolean = profileRepository.getProfile() != null
 }

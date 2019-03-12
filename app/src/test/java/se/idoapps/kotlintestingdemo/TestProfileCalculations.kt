@@ -1,12 +1,8 @@
 package se.idoapps.kotlintestingdemo
 
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import org.junit.Test
-
 import org.junit.Assert.*
 import org.junit.Before
-import org.junit.Rule
-import org.junit.rules.TestRule
 import se.idoapps.kotlintestingdemo.model.GenderTypes
 import se.idoapps.kotlintestingdemo.model.PhysicalActivityTypes
 import se.idoapps.kotlintestingdemo.model.Profile
@@ -15,9 +11,6 @@ import java.time.LocalDateTime
 class TestProfileCalculations {
     private lateinit var maleProfile: Profile
     private lateinit var femaleProfile: Profile
-
-    @get:Rule
-    var rule: TestRule = InstantTaskExecutorRule()
 
     @Before
     fun initTests() {
