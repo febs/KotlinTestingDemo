@@ -1,8 +1,6 @@
 package se.idoapps.kotlintestingdemo
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.nhaarman.mockitokotlin2.any
-import com.nhaarman.mockitokotlin2.doAnswer
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
 import junit.framework.Assert.*
@@ -10,7 +8,6 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TestRule
-import org.mockito.Mockito
 import se.idoapps.kotlintestingdemo.repository.ProfileRepositoryInterface
 import se.idoapps.kotlintestingdemo.service.ProfileServiceInterface
 import se.idoapps.kotlintestingdemo.viewmodel.ShowProfileViewModel
@@ -25,14 +22,12 @@ import java.time.LocalDateTime
 class TestShowProfileViewModel {
     private lateinit var subject: ShowProfileViewModelInterface
     private lateinit var profileService: ProfileServiceInterface
-    private lateinit var profileRepository: ProfileRepositoryInterface
 
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
 
     @Before
     fun initTests() {
-        profileRepository = mock()
         profileService = mock()
 
         subject = ShowProfileViewModel(profileService)
