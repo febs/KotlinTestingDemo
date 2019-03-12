@@ -1,2 +1,2 @@
 # KotlinTestingDemo
-Contains automatic testing examples for .NET Core
+Contains automatic testing examples for Android with Kotlin
